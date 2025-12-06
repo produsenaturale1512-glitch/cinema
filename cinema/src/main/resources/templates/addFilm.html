@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Adaugă film</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<h2>Adaugă film</h2>
+<form method="post" action="/admin/film/add">
+    <input name="titlu" placeholder="Titlu" required><br><br>
+    <input name="gen" placeholder="Gen" required><br><br>
+    <input name="durata" type="number" placeholder="Durata (min)" required><br><br>
+    <input name="popularitate" type="number" placeholder="Popularitate (1-10)" required><br><br>
+    <button type="submit">Salvează</button>
+</form>
+<p><a href="/admin">Înapoi</a></p>
+</body>
+</html>

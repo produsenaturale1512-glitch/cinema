@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Login Admin</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<h2>Admin Login</h2>
+<form method="post" action="/login">
+    <input type="text" name="username" placeholder="Username" required><br><br>
+    <input type="password" name="password" placeholder="Parolă" required><br><br>
+    <button type="submit">Login</button>
+</form>
+<p th:text="${mesaj}" style="color:red;"></p>
+<p><a href="/filme">Vezi filme</a></p>
+</body>
+</html>

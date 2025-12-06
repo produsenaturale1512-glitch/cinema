@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Admin</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<h2>Panou Admin</h2>
+
+<h3>Filme</h3>
+<table>
+    <tr><th>ID</th><th>Titlu</th><th>Gen</th><th>Durata</th><th>Popularity</th></tr>
+    <tr th:each="f : ${filme}">
+        <td th:text="${f.id}"></td>
+        <td th:text="${f.titlu}"></td>
+        <td th:text="${f.gen}"></td>
+        <td th:text="${f.durata}"></td>
+        <td th:text="${f.popularitate}"></td>
+    </tr>
+</table>
+<p><a href="/admin/film/add">Adaugă film</a></p>
+
+<h3>Săli</h3>
+<table>
+    <tr><th>ID</th><th>Nume</th><th>Randuri</th><th>Locuri/Rand</th></tr>
+    <tr th:each="s : ${sali}">
+        <td th:text="${s.id}"></td>
+        <td th:text="${s.nume}"></td>
+        <td th:text="${s.randuri}"></td>
+        <td th:text="${s.locuriPeRand}"></td>
+    </tr>
+</table>
+<p><a href="/admin/sala/add">Adaugă sală</a></p>
+
+<p><a href="/filme">Vizualizare publică filme</a></p>
+</body>
+</html>
