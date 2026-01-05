@@ -1,4 +1,4 @@
-package cinema.model;
+package com.example.cinema.model;
 import java.time.LocalDate;
 import java.time.LocalTime;
 public class ProgramFilm {
@@ -13,6 +13,9 @@ public class ProgramFilm {
     }
     public ProgramFilm(Film film, Sala sala, LocalDate data, LocalTime oraInceput){
         this(0,film,sala,data,oraInceput);
+    }
+    public ProgramFilm(LocalDate data, LocalTime oraInceput){
+        this(0,null,null,data,oraInceput);
     }
     public int getId(){return id;} public Film getFilm(){return film;} public Sala getSala(){return sala;}
     public LocalDate getData(){return data;} public LocalTime getOra(){return oraInceput;}

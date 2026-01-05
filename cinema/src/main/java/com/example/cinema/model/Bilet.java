@@ -1,4 +1,4 @@
-package cinema.model;
+package com.example.cinema.model;
 public class Bilet {
     private int id;
     private Client client;

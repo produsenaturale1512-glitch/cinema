@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Program</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<h2>Programul cinematografului</h2>
+<table>
+    <tr><th>Data</th><th>Ora</th><th>Film</th><th>Gen</th><th>Durata</th><th>Sală</th></tr>
+    <tr th:each="p : ${program}">
+        <td th:text="${p.data}"></td>
+        <td th:text="${p.ora}"></td>
+        <td th:text="${p.film.titlu}"></td>
+        <td th:text="${p.film.gen}"></td>
+        <td th:text="${p.film.durata} + ' min'"></td>
+        <td th:text="${p.sala.nume}"></td>
+    </tr>
+</table>
+<p><a href="/filme">Înapoi la filme</a></p>
+</body>
+</html>
