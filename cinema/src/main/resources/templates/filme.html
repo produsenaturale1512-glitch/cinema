@@ -3,14 +3,27 @@
 <head><meta charset="UTF-8"><title>Filme</title><link rel="stylesheet" href="/style.css"></head>
 <body>
 <h2>Filme disponibile</h2>
+<form method="get" action="/filme" class="filter-form">
+    <label>Gen: <input type="text" name="gen" placeholder="Comedie, Acțiune..." th:value="${genSelectat}"></label>
+    <label>Sortare:
+        <select name="sort" th:value="${sortareSelectata}">
+            <option value="">---</option>
+            <option value="durata">Durată (asc)</option>
+            <option value="popularitate">Popularitate (desc)</option>
+        </select>
+    </label>
+    <button type="submit">Aplică</button>
+</form>
 <table>
-    <tr><th>Titlu</th><th>Gen</th><th>Durata</th></tr>
+    <tr><th>Titlu</th><th>Gen</th><th>Durata</th><th>Popularitate</th></tr>
     <tr th:each="f : ${filme}">
         <td th:text="${f.titlu}"></td>
         <td th:text="${f.gen}"></td>
         <td th:text="${f.durata}"></td>
+        <td th:text="${f.popularitate}"></td>
     </tr>
 </table>
+<p><a href="/program">Vezi programul complet</a></p>
 <p><a href="/">Înapoi</a></p>
 </body>
 </html>

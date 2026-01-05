@@ -1,6 +1,6 @@
-package cinema;
+package com.example.cinema;
 
-import cinema.util.DBManager;
+import com.example.cinema.util.DBManager;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

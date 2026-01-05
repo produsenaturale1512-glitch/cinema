@@ -1,4 +1,4 @@
-package cinema.util;
+package com.example.cinema.util;
 import java.sql.*;
 
 public class DBManager {

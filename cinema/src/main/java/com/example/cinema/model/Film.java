@@ -1,4 +1,4 @@
-package cinema.model;
+package com.example.cinema.model;
 public class Film {
     private int id;
     private String titlu;

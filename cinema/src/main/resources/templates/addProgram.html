@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Adaugă program</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<h2>Adaugă proiecție</h2>
+<form method="post" action="/admin/program/add">
+    <label>Film:
+        <select name="filmId">
+            <option th:each="f : ${filme}" th:value="${f.id}" th:text="${f.titlu}"></option>
+        </select>
+    </label><br><br>
+    <label>Sală:
+        <select name="salaId">
+            <option th:each="s : ${sali}" th:value="${s.id}" th:text="${s.nume}"></option>
+        </select>
+    </label><br><br>
+    <label>Data: <input type="date" name="data" required></label><br><br>
+    <label>Ora: <input type="time" name="ora" required></label><br><br>
+    <button type="submit">Salvează</button>
+</form>
+<p><a href="/admin">Înapoi</a></p>
+</body>
+</html>
